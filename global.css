@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #3d3d3d;
+}
+
+div.g-container {
+    font-family: 'Roboto', sans-serif;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: calc(100vh - 20px);
+    width: calc(100vw - 20px);
+    padding: 10px;
+}
+
+div.g-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3d3d3d;
+    color: #ffffff;
+    height: 150px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+div.g-nav-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a.g-nav-button {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    &:hover {
+        background-color: #ffffff;
+        color: #3d3d3d;
+    }
+    transition: all 0.3s ease;
+}
+
+p.g-description {
+    font-size: 1rem;
+    text-align: center;
+    border: #ffffff 1px dotted;
+    width: 80vw;
+    padding: 1rem;
+}
+
+iframe#app {
+    height: 100%;
+    border: #ffffff 1px solid;
+    padding: 5px;
+    width: 90%;
+}
+
+md-block {
+    font-family: Inter, sans-serif;
+    & a {
+        color: #c4c4c4;
+        text-decoration-color: currentColor;
+        &:hover {
+            color: #eeeeee;
+        }
+    }
+    & h1 {
+        text-align: left;
+    }
+}
+
+
+.g-overview-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.g-box {
+    background-color: #3d3d3d;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        background-color: #ffffff;
+        color: #3d3d3d;
+    }
+    &:hover a {
+        background-color: #ffffff;
+        color: #3d3d3d;
+    }
+    & a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    & .g-box-inner {
+        padding: 0 1rem 1rem 1rem;
+        margin: 0;
+    }
+    & img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    width: 300px;
+}
+
+/* less colloums on mobile */
+@media (max-width: 768px) {
+    .g-overview-grid {
+        grid-template-columns: 1fr;
+    }
+}
